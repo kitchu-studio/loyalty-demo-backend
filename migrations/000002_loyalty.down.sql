@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS settings;
+DROP TABLE IF EXISTS redemptions;
+DROP TABLE IF EXISTS rewards;
+DROP TABLE IF EXISTS earn_codes;
+DROP TABLE IF EXISTS point_ledger;

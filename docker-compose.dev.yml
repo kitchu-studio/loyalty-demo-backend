@@ -1,0 +1,14 @@
+# Local development only: also publish the API on plain HTTP port 8081 so the
+# React Native app (Android emulator -> http://10.0.2.2:8081) can reach it.
+# Port 8081 (not 8080) lets this run next to the other demo backends.
+# Never use this file on a real server.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+#
+# The Caddy service is not needed locally; this file keeps it from taking ports 80/443.
+services:
+  api:
+    ports:
+      - "8081:8080"
+  caddy:
+    profiles: ["prod"]
